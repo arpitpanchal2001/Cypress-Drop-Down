@@ -1,17 +1,17 @@
 /// <reference types="cypress" />
 import DualListDom from "./dualList.dom";
 var dualListDom = new DualListDom();
-export default class DualList {
+export default class TestDualList {
   verifyHeadingText() {
     dualListDom.getHeading().then((heading) => {
       const headingText = heading.text();
       expect(headingText).to.equal("Bootstrap Dual List Demo");
     });
   }
-  VerifyVisiblityOfLeftSearchBox() {
+  verifyVisiblityOfLeftSearchBox() {
     dualListDom.getLeftSearchBox().should("be.visible");
   }
-  VerifyPlaceHolderForLeftSearchBox() {
+  verifyPlaceHolderForLeftSearchBox() {
     dualListDom.getLeftSearchBox().should("have.attr", "placeholder", "search");
   }
 

@@ -1,10 +1,10 @@
 //describe and it block
 /// <reference types="cypress" />
 import DualListDom from "../../action/configration/dualList.dom";
-import DualList from "../../action/configration/dualList";
+import TestDualList from "../../action/configration/dualList";
 describe("Dual List Demo", function () {
   var dualListDom = new DualListDom();
-  var dualList = new DualList();
+  var dualList = new TestDualList();
   beforeEach(() => {
     //https://www.lambdatest.com/selenium-playground/bootstrap-dual-list-box-demo
     cy.siteVisit();
@@ -13,10 +13,10 @@ describe("Dual List Demo", function () {
     dualList.verifyHeadingText();
   });
   it("Verify Left Search Box is visible", function () {
-    dualList.VerifyVisiblityOfLeftSearchBox();
+    dualList.verifyVisiblityOfLeftSearchBox();
   });
   it("Verify search box placeholder text", function () {
-    dualList.VerifyPlaceHolderForLeftSearchBox();
+    dualList.verifyPlaceHolderForLeftSearchBox();
   });
   it("Verify Left Search Input", function () {
     dualList.verifyLeftSearchInput("Danville");
