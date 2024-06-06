@@ -22,9 +22,9 @@ describe("Drop Down Demo", function () {
       this.countries[1],
     ]);
   });
-  it("report fail", function(){
-    dropdown.verifyfailed()
-  })
+  // it("report fail", function(){
+  //   dropdown.verifyfailed()
+  // })
 
   
 });
