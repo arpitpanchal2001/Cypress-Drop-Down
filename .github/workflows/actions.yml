@@ -6,5 +6,13 @@ jobs:
     steps: 
       - name: checkout
         uses: actions/checkout@v3
+
       - name: Cypress run
         uses: cypress-io/github-action@v5
+
+      - name: Upload video artifact
+        if: always()  # Always run this step, even if tests fail
+        uses: actions/upload-artifact@v3
+        with:
+          name: cypress-videos
+          path: cypress/videos/**/*.mp4  # Adjust path as needed
