@@ -2,8 +2,8 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   video: true,  // Enable video recording
-  videoCompression: 32,  // Adjust video compression (1 to 100, default is 32)
-  videoUploadOnPasses: false,
+  videoCompression: 32,  // Adjust video compression (1 to 100, default is 32),
+  
   reporter: 'cypress-mochawesome-reporter',
   env: {
     url:"https://www.lambdatest.com"
