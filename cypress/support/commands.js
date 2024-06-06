@@ -12,8 +12,9 @@
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
     Cypress.Commands.add('siteVisit', ()=>{
-        cy.visit(Cypress.env('url') + '/selenium-playground/bootstrap-dual-list-box-demo')
+        cy.visit(Cypress.env('url') + '/selenium-playground/jquery-dropdown-search-demo')
     })
+  
 //
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
