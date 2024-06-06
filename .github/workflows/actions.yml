@@ -9,7 +9,10 @@ jobs:
 
       - name: Cypress run
         uses: cypress-io/github-action@v5
-
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'  #
       - name: Upload video artifact
         if: always()  # Always run this step, even if tests fail
         uses: actions/upload-artifact@v3
